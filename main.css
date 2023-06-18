@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+    html {
+        font-family: Proxima Nova, system-ui, sans-serif;
+        color: white;
+    }
+
+    .tech-slideshow {
+        height: 100px;
+        max-width: 100%;
+        position: relative;
+        overflow: hidden;
+        font-size:0;
+      }
+      
+      .mover-1 {
+        height: 150px;
+        width: max-content;
+        position: absolute;
+        overflow-x:hidden;
+        top: 0;
+        left: 0;
+        animation: moveSlideshow 8s linear infinite;
+      }
+      
+      .mover-1 img {
+        display:inline-block;
+        vertical-align:middle;
+        width:100px;
+        margin:0;
+      }
+      
+      @keyframes moveSlideshow {
+        100% { 
+          transform: translateX(-500px);  
+        }
+      }
+}
